@@ -5,10 +5,20 @@ theme = 'github-style'
 
 [params]
   author = "s1mplicity"
-  description = "ctfs | research team | students"
+  description = "ctf team | research group | students"
   favicon = "/images/1.png"
   avatar = "/images/1.png"
   headerIcon = "/images/2.png"
-  location = "America/New_York"
-  url = "https://s1mplicity.internetguy.dev"
+  location = "Earth"
+  url = "https://internetguy.dev"
   enableSearch = true
+
+    [[params.links]]
+      title = "ctftime"
+      href = "https://ctftime.org/team/426453"
+      icon = "/images/ctftime.png"
+
+    [[params.links]]
+      title = "github"
+      href = "https://github.com/s1mplicitylab"
+      icon = "/images/ghub.png"

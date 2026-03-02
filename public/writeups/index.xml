@@ -7,5 +7,12 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/writeups/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/writeups/readme/</guid>
+      <description>&lt;h1 id=&#34;writeups&#34;&gt;Writeups&lt;/h1&gt;&#xA;&lt;p&gt;Strictly for CTF writeups, all other general blog posts can be found &lt;a href=&#34;http://localhost:1313/post&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
