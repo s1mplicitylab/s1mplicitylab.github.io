@@ -1,4 +1,4 @@
-baseURL = 'https://internetguy.dev/'
+baseURL = "https://s1mplicity.internetguy.dev/"
 languageCode = 'en-us'
 title = 's1mplicity'
 theme = 'github-style'
