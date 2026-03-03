@@ -2,20 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/post/readme/</loc>
+    <loc>https://s1mplicity.internetguy.dev/writeups/gsctf26/</loc>
+    <lastmod>2026-03-02T18:48:05-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/readme/</loc>
+    <loc>https://s1mplicity.internetguy.dev/</loc>
+    <lastmod>2026-03-02T18:48:05-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/writeups/readme/</loc>
+    <loc>https://s1mplicity.internetguy.dev/writeups/</loc>
+    <lastmod>2026-03-02T18:48:05-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://s1mplicity.internetguy.dev/readme/</loc>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://s1mplicity.internetguy.dev/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/writeups/</loc>
+    <loc>https://s1mplicity.internetguy.dev/tags/</loc>
   </url>
 </urlset>

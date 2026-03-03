@@ -2,17 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeups on s1mplicity</title>
-    <link>http://localhost:1313/writeups/</link>
+    <link>https://s1mplicity.internetguy.dev/writeups/</link>
     <description>Recent content in Writeups on s1mplicity</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Mar 2026 18:48:05 -0500</lastBuildDate>
+    <atom:link href="https://s1mplicity.internetguy.dev/writeups/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://localhost:1313/writeups/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/writeups/readme/</guid>
-      <description>&lt;h1 id=&#34;writeups&#34;&gt;Writeups&lt;/h1&gt;&#xA;&lt;p&gt;Strictly for CTF writeups, all other general blog posts can be found &lt;a href=&#34;http://localhost:1313/post&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
+      <title>Gsctf26</title>
+      <link>https://s1mplicity.internetguy.dev/writeups/gsctf26/</link>
+      <pubDate>Mon, 02 Mar 2026 18:48:05 -0500</pubDate>
+      <guid>https://s1mplicity.internetguy.dev/writeups/gsctf26/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
