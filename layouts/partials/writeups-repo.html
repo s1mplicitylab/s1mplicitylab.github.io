@@ -1,0 +1,100 @@
+<div class="position-relative">
+
+  {{/* Breadcrumb navigation */}}
+  <nav aria-label="Breadcrumb" class="mb-3 mt-3">
+    <ol class="d-flex flex-wrap list-style-none f5" style="gap: 2px;">
+      <li>
+        <svg class="octicon octicon-repo mr-1 text-gray" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+        </svg>
+        <a href="{{ .Site.BaseURL }}" class="text-bold link-gray-dark">{{ .Site.Params.author }}</a>
+      </li>
+      <li class="text-gray mx-1">/</li>
+      <li>
+        <a href="{{ .Parent.RelPermalink }}" class="text-bold link-gray-dark">writeups</a>
+      </li>
+      <li class="text-gray mx-1">/</li>
+      <li class="text-bold">{{ .Title }}</li>
+    </ol>
+  </nav>
+
+  {{/* Description badge */}}
+  {{ with .Params.description }}
+  <p class="f4 text-gray mb-3">{{ . }}</p>
+  {{ end }}
+
+  {{/* Tags */}}
+  {{ with .Params.tags }}
+  <div class="mb-3">
+    {{ range . }}
+    <a class="topic-tag topic-tag-link f6 mr-2" href="{{ absURL (print "tags/" . | urlize) }}">{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* File browser box */}}
+  <div class="Box mb-3">
+    <div class="Box-header d-flex flex-items-center" style="background-color: var(--color-canvas-subtle);">
+      <div class="flex-auto d-flex flex-items-center">
+        <svg class="octicon octicon-git-branch text-gray mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"></path>
+        </svg>
+        <span class="css-truncate css-truncate-target text-bold f6">main</span>
+      </div>
+      <span class="text-gray f6">
+        {{ len .RegularPages }} challenge{{ if ne (len .RegularPages) 1 }}s{{ end }}
+      </span>
+    </div>
+
+    {{ if gt (len .RegularPages) 0 }}
+    <table class="width-full" cellpadding="0" cellspacing="0">
+      <tbody>
+        {{ range .RegularPages }}
+        <tr class="js-navigation-item" style="border-top: 1px solid var(--color-border-muted);">
+          <td style="width: 16px; padding: 6px 8px 6px 16px; vertical-align: middle; color: var(--color-fg-muted);">
+            <svg class="octicon octicon-file" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+              <path fill-rule="evenodd" d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"></path>
+            </svg>
+          </td>
+          <td style="padding: 6px 16px 6px 0; vertical-align: middle;">
+            <span class="css-truncate css-truncate-target">
+              <a class="js-navigation-open link-gray-dark" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}.md</a>
+            </span>
+          </td>
+          <td class="text-gray" style="padding: 6px 16px 6px 0; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle;">
+            {{ .Summary | plainify | truncate 72 }}
+          </td>
+          <td class="text-right text-gray" style="padding: 6px 16px; white-space: nowrap; vertical-align: middle;">
+            <relative-time datetime="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" class="no-wrap">
+              {{ .PublishDate.Format "Jan 2, 2006" }}
+            </relative-time>
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+    {{ else }}
+    <div class="blankslate py-4 text-center text-gray f6">
+      No challenges yet.
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* README / CTF description from _index.md body */}}
+  {{ with .Content }}
+  <div class="Box">
+    <div class="Box-header d-flex flex-items-center" style="background-color: var(--color-canvas-subtle);">
+      <svg class="octicon octicon-book mr-2 text-gray" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+        <path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"></path>
+      </svg>
+      <span class="text-bold f6">README.md</span>
+    </div>
+    <div class="Box-body p-4">
+      <article class="markdown-body entry-content container-lg f5">
+        {{ . }}
+      </article>
+    </div>
+  </div>
+  {{ end }}
+
+</div>

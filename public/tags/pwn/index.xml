@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pwn on s1mplicity</title>
+    <link>http://localhost:1313/tags/pwn/</link>
+    <description>Recent content in Pwn on s1mplicity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pwn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>example-ctf-2025</title>
+      <link>http://localhost:1313/writeups/example-ctf-2025/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/writeups/example-ctf-2025/</guid>
+      <description>&lt;p&gt;This is the README for example-ctf-2025. You can add notes about the CTF here — scores, team performance, interesting challenges, etc.&lt;/p&gt;&#xA;&lt;p&gt;Delete this directory and replace it with your own CTF writeup folders.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

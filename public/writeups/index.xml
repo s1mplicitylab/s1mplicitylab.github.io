@@ -2,18 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeups on s1mplicity</title>
-    <link>https://s1mplicity.internetguy.dev/writeups/</link>
+    <link>http://localhost:1313/writeups/</link>
     <description>Recent content in Writeups on s1mplicity</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2026 18:48:05 -0500</lastBuildDate>
-    <atom:link href="https://s1mplicity.internetguy.dev/writeups/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Gsctf26</title>
-      <link>https://s1mplicity.internetguy.dev/writeups/gsctf26/</link>
-      <pubDate>Mon, 02 Mar 2026 18:48:05 -0500</pubDate>
-      <guid>https://s1mplicity.internetguy.dev/writeups/gsctf26/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

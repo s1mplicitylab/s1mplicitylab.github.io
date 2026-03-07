@@ -1,0 +1,73 @@
+{{ define "content" }}
+<div class="application-main">
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="{{ .Site.BaseURL }}">
+                  <img class="avatar-user" src="{{ with $.Site.Params.avatar }}{{ $.Site.Params.avatar }}{{ else }}{{ "images/avatar.png" | absURL }}{{ end }}" width="32" height="32">
+                </a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="{{ .Site.BaseURL }}">{{ .Site.Params.author }}</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <a href="{{ .Parent.Parent.RelPermalink }}" class="css-truncate-target mr-1">writeups</a>
+                  <span class="path-divider">/</span>
+                  <a href="{{ .Parent.RelPermalink }}" class="css-truncate-target mr-1">{{ .Parent.Title }}</a>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 300px">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}.md</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  {{ with .Params.tags }}
+                  {{ range (first 3 .) }}
+                  <a class="topic-tag topic-tag-link f6 mr-1" href="{{ absURL (print "tags/" . | urlize) }}">{{ . }}</a>
+                  {{ end }}
+                  {{ end }}
+                  &nbsp;&middot;&nbsp;
+                  Created <relative-time datetime="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" class="no-wrap">
+                    {{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</relative-time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div class="file my-2">
+              <div class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2;">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    <svg class="octicon octicon-file mr-1 text-gray" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                      <path fill-rule="evenodd" d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"></path>
+                    </svg>
+                    {{ .Title }}.md
+                  </div>
+                </div>
+              </div>
+
+              <div class="blob-wrapper data type-markdown">
+                <article class="markdown-body entry-content container-lg f5 p-5">
+                  {{ .Content }}
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+{{ end }}

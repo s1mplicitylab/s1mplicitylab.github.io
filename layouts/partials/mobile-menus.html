@@ -5,7 +5,7 @@
 <div class="UnderlineNav user-profile-nav d-block d-md-none position-sticky top-0 pl-3 ml-n3 mr-n3 pr-3 bg-white"
   style="z-index:3;">
   <nav class="UnderlineNav-body">
-    <a class="UnderlineNav-item {{ if .IsHome }} selected {{ end }}" href="{{ .Site.BaseURL }}">
+    <a class="UnderlineNav-item {{ if .IsHome }} selected {{ end }}" href="{{ "/" | relURL }}">
       <svg class="octicon octicon-book UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1"
         width="16">
         <path fill-rule="evenodd"
@@ -15,7 +15,7 @@
       Overview
     </a>
     <a class='UnderlineNav-item {{ if eq .Section "post" }} selected {{ end }}{{ if eq .Type "tags" }} selected {{ end }}'
-      href="{{urls.JoinPath .Site.BaseURL "post"}}">
+      href="{{ "post" | relURL }}">
       <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1"
         width="16">
         <path fill-rule="evenodd"
@@ -25,7 +25,7 @@
       Posts
       <span class="Counter ">{{ $section_count}}</span>
     </a>
-    <a class="UnderlineNav-item {{ if eq .Section "writeups" }} selected {{ end }}" href="{{urls.JoinPath .Site.BaseURL "writeups"}}">
+    <a class="UnderlineNav-item {{ if eq .Section "writeups" }} selected {{ end }}" href="{{ "writeups" | relURL }}">
       <svg class="octicon octicon-code UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
         version="1.1" width="16">
         <path fill-rule="evenodd"

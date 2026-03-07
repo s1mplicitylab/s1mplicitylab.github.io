@@ -2,19 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://s1mplicity.internetguy.dev/writeups/gsctf26/</loc>
-    <lastmod>2026-03-02T18:48:05-05:00</lastmod>
+    <loc>http://localhost:1313/tags/android/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://s1mplicity.internetguy.dev/</loc>
-    <lastmod>2026-03-02T18:48:05-05:00</lastmod>
+    <loc>http://localhost:1313/tags/crypto/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://s1mplicity.internetguy.dev/writeups/</loc>
-    <lastmod>2026-03-02T18:48:05-05:00</lastmod>
+    <loc>http://localhost:1313/writeups/picoctf/m1n10n5_53cr37/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://s1mplicity.internetguy.dev/readme/</loc>
+    <loc>http://localhost:1313/writeups/picoctf/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://s1mplicity.internetguy.dev/categories/</loc>
+    <loc>http://localhost:1313/tags/rev/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://s1mplicity.internetguy.dev/tags/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/readme/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

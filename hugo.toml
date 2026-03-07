@@ -22,3 +22,13 @@ theme = 'github-style'
       title = "github"
       href = "https://github.com/s1mplicitylab"
       icon = "/images/ghub.png"
+
+
+
+[outputs]
+  home = ["html", "json"]
+
+[outputFormats.json]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = false
